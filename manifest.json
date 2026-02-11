@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "ERP Attendance Marker",
+  "version": "1.0",
+  "description": "Mark attendance using roll numbers",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": [
+    "https://echelon.aperptech.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://echelon.aperptech.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
